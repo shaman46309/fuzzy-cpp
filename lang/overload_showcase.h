@@ -1,17 +1,17 @@
+/* Overloadable operators:
+ * +    -    *    /    =    <    >    +=   -=   *=   /=   <<   >>
+ * <<=  >>=  ==   !=   <=   >=   ++   --   %    &    ^    !    |
+ * ~    &=   ^=   |=   &&   ||   %=   []   ()   ,    ->*  ->   new 
+ * delete    new[]     delete[]
+ */
 namespace showcase { 
-    class C1 { 
+    class C { 
         public:
             int ivalue_;
             void SetIvalue(const int& ivalue) {
                 ivalue_ = ivalue;
             }
-    };
-    class C2 { 
-        public:
-            int ivalue_;
-            void SetIvalue(const int& ivalue) {
-                ivalue_ = ivalue;
-            }
-    };
+   };
+
 }
 
