@@ -4,14 +4,6 @@
 #include "lib.h"
 #include "overload_showcase.h"
 
-namespace showcase {
-C operator+ (const C& c1, const C c2) {
-    C temp;
-    temp.SetIvalue(c1.ivalue_ + c2.ivalue_);
-    return temp;
-}
-}
-
 int main(int c, char** a) {
     lib::say("Main has started...");
     lib::say("Enter your name below");
@@ -28,7 +20,11 @@ int main(int c, char** a) {
     c1.SetIvalue(20);
     c2.SetIvalue(30);
     showcase::C sum = c1 + c2;
+    showcase::C difference = c1 - c2;
     lib::say(sum.ivalue_);
+    lib::say(difference.ivalue_);
+    lib::say(c1 > c2);
+    lib::say(c1 < c2);
     lib::say("Main has ended...");
 }
 
