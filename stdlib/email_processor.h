@@ -1,5 +1,6 @@
 #include <functional>
 #include <string>
+#include <iostream>
 
 namespace showcase {
 
@@ -13,6 +14,7 @@ public:
             _handler_func( message );
         }
         // other processing
+        std::cout << "Received message [" << message << "]\n";
     }
     void setHandlerFunc (std::function<void (const std::string&)> handler_func)
     {

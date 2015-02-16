@@ -11,4 +11,8 @@ MessageSizeStore size_store;
 processor.setHandlerFunc( 
         [&] (const std::string& message) { size_store.checkMessage( message ); } 
 );
+processor.receiveMessage("abra");
+processor.receiveMessage("ca");
+processor.receiveMessage("dabra");
+std::cout << "Message Size store : max size was " << size_store.getSize() << std::endl;
 }
